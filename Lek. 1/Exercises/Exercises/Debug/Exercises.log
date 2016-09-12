@@ -1,0 +1,10 @@
+﻿Build started 12-09-2016 15:03:20.
+     1>Project "D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Exercises\Exercises.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         D:\Programmer\Visual Studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Debug\Exercises.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Debug\Exercises.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Debug\Exercises.lib" /MACHINE:X86 Debug\Main.obj
+         Exercises.vcxproj -> D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Debug\Exercises.exe
+     1>Done Building Project "D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Lek. 1\Exercises\Exercises\Exercises.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.13
