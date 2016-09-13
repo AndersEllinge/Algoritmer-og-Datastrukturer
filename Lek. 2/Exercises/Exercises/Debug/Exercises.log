@@ -1,0 +1,19 @@
+﻿Build started 13-09-2016 15:40:25.
+     1>Project "D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Exercises\Exercises.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Users\Bruger\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\Source.cpp" CircularQueue.cpp
+         CircularQueue.cpp
+     1>d:\f16\algoritmer-og-datastrukturer\lek. 2\exercises\exercises\circularqueue.cpp(80): warning C4018: '<': signed/unsigned mismatch
+     1>d:\f16\algoritmer-og-datastrukturer\lek. 2\exercises\exercises\circularqueue.cpp(86): warning C4018: '<=': signed/unsigned mismatch
+     1>d:\f16\algoritmer-og-datastrukturer\lek. 2\exercises\exercises\circularqueue.cpp(90): warning C4018: '<': signed/unsigned mismatch
+         Source.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Debug\Exercises.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Debug\Exercises.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Debug\Exercises.lib" /MACHINE:X86 Debug\Source.obj
+         Debug\CircularQueue.obj
+         Exercises.vcxproj -> D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Debug\Exercises.exe
+     1>Done Building Project "D:\F16\Algoritmer-og-Datastrukturer\Lek. 2\Exercises\Exercises\Exercises.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.21
