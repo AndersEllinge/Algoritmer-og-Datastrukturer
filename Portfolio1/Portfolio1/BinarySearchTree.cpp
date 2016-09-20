@@ -54,6 +54,21 @@ void BinarySearchTree::printTree() const
 		printTree(root);
 }
 
+int BinarySearchTree::getNodes() const				// Public function, it uses the private function getNodes(BinaryNode *t, int& temp).
+{													// It works as a temp place holder for the recursive calls in above function.
+	if (isEmpty())									// Otherwise a global variable would be needed to keep track of the amount of recursive calls.
+	{
+		cout << "Empty tree" << endl;
+		return 0;
+	}
+	else
+	{
+		int temp = 0;
+		getNodes(root, temp);
+		return temp;
+	}
+}
+
 void BinarySearchTree::makeEmpty()
 {
 	makeEmpty(root);
@@ -166,21 +181,24 @@ void BinarySearchTree::printTree(BinaryNode *t) const
 {
 	if (t != nullptr)
 	{
-		cout << "Printing left:" << endl;
+		//cout << "Printing left:" << endl;
 		printTree(t->left);
 		cout << t->element << endl;
-		cout << "Printing right:" << endl;
+		//cout << "Printing right:" << endl;
 		printTree(t->right);
 	}
 }
 
-int BinarySearchTree::getNodes()
+
+int BinarySearchTree::getNodes(BinaryNode *t, int& temp) const
 {
-	int temp;
-
-
-
-	return 0;
+	if (t != nullptr)
+	{
+		getNodes(t->left,temp);
+		temp++;
+		getNodes(t->right,temp);
+	}
+	return temp;
 }
 
 

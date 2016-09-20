@@ -10,8 +10,19 @@ int main()
 	T.insert(1);
 	T.insert(4);
 	T.insert(3);
+	T.insert(16);
+	T.insert(18);
+	T.insert(12);
+	T.insert(11);
+	T.insert(14);
+	T.insert(13);
+
+
+	std::cout << T.getNodes() << std::endl;
 
 	std::cout << T.contains(7) << std::endl;
 
-	T.printTree();
+
+
+	//T.printTree();
 }
