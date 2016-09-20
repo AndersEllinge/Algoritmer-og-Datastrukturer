@@ -1,8 +1,10 @@
-
 #include "BinarySearchTree.h"
+#include <ctime>
+
 
 int main()
 {
+		
 	BinarySearchTree T;
 	T.insert(6);
 	T.insert(8);
@@ -11,18 +13,20 @@ int main()
 	T.insert(4);
 	T.insert(3);
 	T.insert(16);
-	T.insert(18);
-	T.insert(12);
-	T.insert(11);
-	T.insert(14);
-	T.insert(13);
 
-
+	T.printTree();
+	
 	std::cout << T.getNodes() << std::endl;
+	std::cout << T.getLeaves() << std::endl;
+	std::cout << T.getFullNodes() << std::endl;
 
-	std::cout << T.contains(7) << std::endl;
+	/*int start_s = clock();
+	int stop_s = clock();
+	cout << "time: " << (stop_s - start_s) / (double(CLOCKS_PER_SEC)) << endl;*/
 
+	
 
-
-	//T.printTree();
+	
+	
+	
 }

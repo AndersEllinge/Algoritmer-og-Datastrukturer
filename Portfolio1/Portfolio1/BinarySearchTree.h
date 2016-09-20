@@ -33,7 +33,9 @@ public:
 	bool isEmpty() const;
 	void printTree() const;
 
-	int getNodes() const;
+	int getNodes();
+	int getLeaves();
+	int getFullNodes();
 	
 	void makeEmpty();
 	void insert(const int & x);
@@ -54,7 +56,10 @@ private:
 	void makeEmpty(BinaryNode * & t);
 	void printTree(BinaryNode *t) const;
 
-	int getNodes(BinaryNode *t, int& temp) const;
+	int getNodes(BinaryNode *t, int& temp);
+	int getLeaves(BinaryNode *t, int& temp);
+	int getFullNodes(BinaryNode *t, int& temp);
+
 
 	BinaryNode * clone(BinaryNode *t) const;
 	
