@@ -1,4 +1,4 @@
-﻿Build started 20-09-2016 17:58:00.
+﻿Build started 20-09-2016 20:52:57.
      1>Project "D:\Skole\5. semester\Algoritmer-og-Datastrukturer\Portfolio1\Portfolio1\Portfolio1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Programmer\Visual Studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.47
+Time Elapsed 00:00:00.53
