@@ -33,6 +33,10 @@ public:
 	bool isEmpty() const;
 	void printTree() const;
 
+	void preOrderPrintTree();
+	void postOrderPrintTree();
+	void levelOrderPrintTree();
+
 	int getNodes();
 	int getLeaves();
 	int getFullNodes();
@@ -55,6 +59,11 @@ private:
 	
 	void makeEmpty(BinaryNode * & t);
 	void printTree(BinaryNode *t) const;
+
+	void preOrderPrintTree(BinaryNode* t);
+	void postOrderPrintTree(BinaryNode* t);
+	void levelOrderPrintTree(BinaryNode* t);
+
 
 	int getNodes(BinaryNode *t, int& temp);
 	int getLeaves(BinaryNode *t, int& temp);
