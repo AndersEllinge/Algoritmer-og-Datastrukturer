@@ -287,7 +287,6 @@ void BinarySearchTree::levelOrderPrintTree(BinaryNode * t)		// I could not see a
 
 }
 
-
 int BinarySearchTree::getNodes(BinaryNode *t, int& temp)		// After a node has been visited, temp is incremented, when temp is returned
 {																// then temp should be amount of nodes in the tree.
 	if (t != nullptr)
