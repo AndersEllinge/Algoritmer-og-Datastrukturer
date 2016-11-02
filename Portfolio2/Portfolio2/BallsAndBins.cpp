@@ -1,7 +1,5 @@
 #include "BallsAndBins.h"
 
-
-
 BallsAndBins::BallsAndBins()
 {
 }
@@ -14,16 +12,9 @@ BallsAndBins::BallsAndBins(int n)
 
 void BallsAndBins::throwBalls()
 {
-	int temp = 10000;
 	for (size_t i = 1; i <= balls; i++)
 	{
 		bins[randomNumber()]++;
-
-		if (i == temp)
-		{
-			std::cout << i << std::endl;
-			temp = temp + 10000;
-		}
 	}
 }
 
@@ -83,11 +74,6 @@ int BallsAndBins::randomNumber()
 	std::uniform_int_distribution<> distr(0, getN()-1); // define the range
 
 	return distr(eng);
-}
-
-int BallsAndBins::checkBin()
-{
-	return 0;
 }
 
 int BallsAndBins::getN()

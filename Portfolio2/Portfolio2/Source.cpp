@@ -2,7 +2,7 @@
 
 int main()
 {
-	BallsAndBins bin1(100000000);
+	BallsAndBins bin1(100022);
 
 	for (size_t i = 0; i < 10; i++)
 	{
