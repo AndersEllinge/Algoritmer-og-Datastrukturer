@@ -1,0 +1,106 @@
+#include "GudeKlassen.h"
+
+
+GudeKlassen::GudeKlassen()
+{
+}
+
+GudeKlassen::GudeKlassen(int n, int b) // if b = 1, then we work with a bool vector.
+{
+	if (b) {
+		inputVector.resize(n);
+		for (size_t i = 0; i < n; i++)
+		{
+			inputVector[i] = randomNumberTrueFalse();
+		}
+	}
+	else {
+		inputVector.resize(n);
+		for (size_t i = 0; i < n; i++)
+		{
+			inputVector[i] = randomNumber();
+		}
+	}
+}
+
+int GudeKlassen::exercise753a(int k)
+{
+	for (size_t i = 0; i < inputVector.size(); i++) {			// Nested for loop, this means the list is run through 2 times, which is N^2.
+		for (size_t j = 0; j < inputVector.size(); j++) {
+			if ((inputVector[i] + inputVector[j]) == k) {
+				std::cout << inputVector[i] << " + " << inputVector[j] << " = " << k << std::endl;
+				return 1;
+			}
+		}
+	}
+
+	return 0;
+}
+
+int GudeKlassen::exercise753b(int k)
+{
+	std::sort(inputVector.begin(), inputVector.end());	// A standard C++ NlogN sort in ascending order.
+	
+	int left = 0;	// left index
+	int right = inputVector.size()-1;	// right index
+
+	while (!right <= left) // Break criteria, indexes have met.
+	{
+		if ((inputVector[left] + inputVector[right]) == k) { // print and return 1 if a valid sum is found.
+			std::cout << inputVector[left] << " + " << inputVector[right] << " = " << k << std::endl;
+			return 1;
+		}
+		if ((inputVector[left] + inputVector[right]) < k) // if the sum is less than k, then we increase the lowest value, which is an increment of the left index.
+			left++;
+		if ((inputVector[left] + inputVector[right]) > k) // if the sum is greater than k, then we decrease the highest value, which is a decrement of the right index.
+			right--;
+	}
+
+	return 0;
+}
+
+void GudeKlassen::exercise744()
+{
+	int left = 0;	// left index
+	int right = inputVector.size() - 1;	// right index
+
+	while (left <= right) {
+		if (inputVector[left] > inputVector[right])
+			std::swap(inputVector[left], inputVector[right]);
+		if (inputVector[left] == 0)
+			left++;
+		if (inputVector[right] == 1)
+			right--;
+	}
+}
+
+void GudeKlassen::printInputVector()
+{
+	std::cout << "InputVector is: ";
+	for (size_t i = 0; i < inputVector.size(); i++)
+			std::cout << inputVector[i] << " ";
+	std::cout << std::endl;
+}
+
+int GudeKlassen::randomNumber()
+{
+	std::random_device rd; // obtain a random number from hardware
+	std::mt19937 eng(rd()); // seed the generator
+	std::uniform_int_distribution<> distr(0, 99); // define the range
+
+	return distr(eng);
+}
+
+int GudeKlassen::randomNumberTrueFalse()
+{
+	std::random_device rd; // obtain a random number from hardware
+	std::mt19937 eng(rd()); // seed the generator
+	std::uniform_int_distribution<> distr(0, 1); // define the range
+
+	return distr(eng);
+}
+
+
+GudeKlassen::~GudeKlassen()
+{
+}
