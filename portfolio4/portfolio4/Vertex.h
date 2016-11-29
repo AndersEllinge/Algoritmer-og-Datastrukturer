@@ -8,40 +8,24 @@ class Vertex
 {
 public:
 	Vertex(int id, int x);
-	Vertex(int n);
-	void neighbors(int v, int w, int weight);
 
-	void topSort();
-
-	int findNewVertexOfIndegreeZero();
-
-	void printGraph();
-	void printTopSort();
-
-	~Vertex();
-
-
-private:
-	int getId();
-	bool getKnown();
-	double getInf();
 	void incrementIndegree();
 	void decrementIndegree();
-	int getIndegree();
-	void setTopNum(int num);
-	int getTopNum();
 
-	std::vector<Vertex*> verticies;
-	std::vector<Vertex*> adjacencyList;
-	std::vector<int> weightVector;
-	//std::queue<Vertex*> topSortedVerticies;
+	~Vertex();
+	
+	// I could have made all these attributes private, but to be honest, there would be set and get function for them all so what is the point of setting them private
+	std::vector<Vertex*> adjacencyList; // list of neighbors a vertex has
+	std::vector<int> weightVector; // cost of the edges between a vertex and its neighbors
+	int topNum;  // Index of the vertex when the graph is top sorted
+	int indegree; // Indgree of the vertex
+	Vertex* path; // Pointer to the next vertex in the dijkstra graph
+	int vertexId; // An ID to identify a vertex, not really used in this project
+	bool known; // Bool to determine wether the vertex is known or unknown in the dijkstra graph
+	double distance; // The distance to the vertex
 
-	int topNum; // top sorted number
-	int indegree;
-	Vertex* path;
-	int vertexId;
-	bool known;
-	int distance;
+private:
 	double inf = std::numeric_limits<double>::infinity();
+	
 };
 
