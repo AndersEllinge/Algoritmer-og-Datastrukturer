@@ -86,28 +86,28 @@ void Coordinates::printCollinearPoints()
 	}
 }
 
-//void Coordinates::setMap(Image * inputMap)
-//{
-//	map = inputMap;
-//}
+void Coordinates::setMap(Image * inputMap)
+{
+	map = inputMap;
+}
 
-//void Coordinates::drawGroups()
-//{
-//	for (size_t i = 0; i < fourOrMoreCollinear.size(); i++)
-//	{
-//		for (size_t k = 1; k < fourOrMoreCollinear[i].size(); k++)
-//		{
-//			drawStraightLine(fourOrMoreCollinear[i][k]->coordinateX, fourOrMoreCollinear[i][k]->coordinateY, fourOrMoreCollinear[i][k - 1]->coordinateX, fourOrMoreCollinear[i][k-1]->coordinateY);
-//		}
-//	}
-//
-//	for (size_t i = 0; i < coordinates.size(); i++)
-//	{
-//		map->setPixel8U(coordinates[i][0]->coordinateX, coordinates[i][0]->coordinateY, 0);
-//	}
-//
-//	map->saveAsPGM("Map1.pgm");
-//}
+void Coordinates::drawGroups()
+{
+	for (size_t i = 0; i < fourOrMoreCollinear.size(); i++)
+	{
+		for (size_t k = 1; k < fourOrMoreCollinear[i].size(); k++)
+		{
+			drawStraightLine(fourOrMoreCollinear[i][k]->coordinateX, fourOrMoreCollinear[i][k]->coordinateY, fourOrMoreCollinear[i][k - 1]->coordinateX, fourOrMoreCollinear[i][k-1]->coordinateY);
+		}
+	}
+
+	for (size_t i = 0; i < coordinates.size(); i++)
+	{
+		map->setPixel8U(coordinates[i][0]->coordinateX, coordinates[i][0]->coordinateY, 0);
+	}
+
+	map->saveAsPGM("Map1.pgm");
+}
 
 void Coordinates::findCollinearPoints()
 {
@@ -179,156 +179,156 @@ int Coordinates::randomNumber()
 	return distr(eng);
 }
 
-//void Coordinates::drawStraightLine(int x0, int y0, int x1, int y1)
-//{
-//	if (x0 < x1) {
-//		int deltaX = x1 - x0;
-//		int deltaY = y1 - y0;
-//
-//		if (y0 > y1)
-//			deltaY = y0 - y1;
-//
-//		if (x0 > x1)
-//			deltaX = x0 - x1;
-//
-//		if (deltaY < deltaX) {
-//			int deltaErr = deltaY - deltaX;
-//			int y = y0;
-//
-//			for (int x = x0; x < x1; x++)
-//			{
-//				map->setPixel8U(x, y, 100);
-//
-//				if (deltaErr >= 0) {
-//					if (y1 > y0)
-//						y = y + 1;
-//					else
-//						y = y - 1;
-//					deltaErr = deltaErr - deltaX;
-//				}
-//
-//				deltaErr = deltaErr + deltaY;
-//
-//			}
-//		}
-//
-//		else {
-//
-//			int deltaErr = deltaX - deltaY;
-//
-//			if (y0 > y1) {
-//				int x = x1;
-//				for (int y = y1; y < y0; y++)
-//				{
-//					map->setPixel8U(x, y, 100);
-//
-//					if (deltaErr >= 0) {
-//						if (x1 > x0)
-//							x = x - 1;
-//						else
-//							x = x + 1;
-//						deltaErr = deltaErr - deltaY;
-//					}
-//
-//					deltaErr = deltaErr + deltaX;
-//
-//				}
-//			}
-//			else {
-//				int x = x0;
-//				for (int y = y0; y < y1; y++)
-//				{
-//					map->setPixel8U(x, y, 100);
-//
-//					if (deltaErr >= 0) {
-//						if (x1 > x0)
-//							x = x + 1;
-//						else
-//							x = x - 1;
-//						deltaErr = deltaErr - deltaY;
-//					}
-//
-//					deltaErr = deltaErr + deltaX;
-//
-//				}
-//			}
-//		}
-//
-//
-//	}
-//
-//	else {
-//		int deltaX = x0 - x1;
-//		int deltaY = y0 - y1;
-//		int y = y1;
-//
-//		if (y1 > y0)
-//			deltaY = y1 - y0;
-//
-//		int deltaErr = deltaY - deltaX;
-//
-//		if (deltaY < deltaX) {
-//			for (int x = x1; x < x0; x++)
-//			{
-//
-//				map->setPixel8U(x, y, 100);
-//
-//				if (deltaErr >= 0) {
-//					if (y1 > y0)
-//						y = y - 1;
-//					else
-//						y = y + 1;
-//					deltaErr = deltaErr - deltaX;
-//				}
-//
-//				deltaErr = deltaErr + deltaY;
-//
-//			}
-//		}
-//
-//		else {
-//
-//			int deltaErr = deltaX - deltaY;
-//
-//			if (y0 > y1) {
-//				int x = x1;
-//				for (int y = y1; y < y0; y++)
-//				{
-//					map->setPixel8U(x, y, 100);
-//
-//					if (deltaErr >= 0) {
-//						if (x1 > x0)
-//							x = x - 1;
-//						else
-//							x = x + 1;
-//						deltaErr = deltaErr - deltaY;
-//					}
-//
-//					deltaErr = deltaErr + deltaX;
-//
-//				}
-//			}
-//			else {
-//				int x = x0;
-//				for (int y = y0; y < y1; y++)
-//				{
-//					map->setPixel8U(x, y, 100);
-//
-//					if (deltaErr >= 0) {
-//						if (x1 > x0)
-//							x = x + 1;
-//						else
-//							x = x - 1;
-//						deltaErr = deltaErr - deltaY;
-//					}
-//
-//					deltaErr = deltaErr + deltaX;
-//
-//				}
-//			}
-//		}
-//	}
-//}
+void Coordinates::drawStraightLine(int x0, int y0, int x1, int y1)
+{
+	if (x0 < x1) {
+		int deltaX = x1 - x0;
+		int deltaY = y1 - y0;
+
+		if (y0 > y1)
+			deltaY = y0 - y1;
+
+		if (x0 > x1)
+			deltaX = x0 - x1;
+
+		if (deltaY < deltaX) {
+			int deltaErr = deltaY - deltaX;
+			int y = y0;
+
+			for (int x = x0; x < x1; x++)
+			{
+				map->setPixel8U(x, y, 100);
+
+				if (deltaErr >= 0) {
+					if (y1 > y0)
+						y = y + 1;
+					else
+						y = y - 1;
+					deltaErr = deltaErr - deltaX;
+				}
+
+				deltaErr = deltaErr + deltaY;
+
+			}
+		}
+
+		else {
+
+			int deltaErr = deltaX - deltaY;
+
+			if (y0 > y1) {
+				int x = x1;
+				for (int y = y1; y < y0; y++)
+				{
+					map->setPixel8U(x, y, 100);
+
+					if (deltaErr >= 0) {
+						if (x1 > x0)
+							x = x - 1;
+						else
+							x = x + 1;
+						deltaErr = deltaErr - deltaY;
+					}
+
+					deltaErr = deltaErr + deltaX;
+
+				}
+			}
+			else {
+				int x = x0;
+				for (int y = y0; y < y1; y++)
+				{
+					map->setPixel8U(x, y, 100);
+
+					if (deltaErr >= 0) {
+						if (x1 > x0)
+							x = x + 1;
+						else
+							x = x - 1;
+						deltaErr = deltaErr - deltaY;
+					}
+
+					deltaErr = deltaErr + deltaX;
+
+				}
+			}
+		}
+
+
+	}
+
+	else {
+		int deltaX = x0 - x1;
+		int deltaY = y0 - y1;
+		int y = y1;
+
+		if (y1 > y0)
+			deltaY = y1 - y0;
+
+		int deltaErr = deltaY - deltaX;
+
+		if (deltaY < deltaX) {
+			for (int x = x1; x < x0; x++)
+			{
+
+				map->setPixel8U(x, y, 100);
+
+				if (deltaErr >= 0) {
+					if (y1 > y0)
+						y = y - 1;
+					else
+						y = y + 1;
+					deltaErr = deltaErr - deltaX;
+				}
+
+				deltaErr = deltaErr + deltaY;
+
+			}
+		}
+
+		else {
+
+			int deltaErr = deltaX - deltaY;
+
+			if (y0 > y1) {
+				int x = x1;
+				for (int y = y1; y < y0; y++)
+				{
+					map->setPixel8U(x, y, 100);
+
+					if (deltaErr >= 0) {
+						if (x1 > x0)
+							x = x - 1;
+						else
+							x = x + 1;
+						deltaErr = deltaErr - deltaY;
+					}
+
+					deltaErr = deltaErr + deltaX;
+
+				}
+			}
+			else {
+				int x = x0;
+				for (int y = y0; y < y1; y++)
+				{
+					map->setPixel8U(x, y, 100);
+
+					if (deltaErr >= 0) {
+						if (x1 > x0)
+							x = x + 1;
+						else
+							x = x - 1;
+						deltaErr = deltaErr - deltaY;
+					}
+
+					deltaErr = deltaErr + deltaX;
+
+				}
+			}
+		}
+	}
+}
 
 int Coordinates::getCoordinateX()
 {

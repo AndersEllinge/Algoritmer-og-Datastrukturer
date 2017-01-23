@@ -76,6 +76,11 @@ int CircularQueue::deQueue()
 
 void CircularQueue::print()
 {
+	if (empty())
+	{
+		std::cout << "Queue is empty" << std::endl;
+		return;
+	}
 	if (end > front)
 		for (size_t i = front; i < end; i++)
 		{

@@ -19,10 +19,13 @@ int main()
 		firstQueue.enQueue(i);
 	}
 	firstQueue.deQueue();
-
 	firstQueue.enQueue(50);
+	
 
 	firstQueue.print();
+
+	//std::cout << balPar(")(") << std::endl;
+
 }
 
 bool balPar(string text)

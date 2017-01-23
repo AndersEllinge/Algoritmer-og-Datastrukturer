@@ -7,8 +7,8 @@ int isPrime(int n, int x);
 
 int main()
 {
-	std::cout << getNaturalSum(100) << std::endl;
-	std::cout << isPrime(81, 81) << std::endl;
+	std::cout << getNaturalSum(4) << std::endl;
+	//std::cout << isPrime(81, 81) << std::endl;
 }
 
 int getNaturalSum(int n)

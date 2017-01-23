@@ -29,6 +29,8 @@ int main()
 	coordinates.printCoordinates();
 	coordinates.findCollinearPoints();
 	coordinates.printCollinearPoints();
-
+	Image* map = PPMLoader::load("map.pgm");
+	coordinates.setMap(map);
+	coordinates.drawGroups();
 	return 0;
 }

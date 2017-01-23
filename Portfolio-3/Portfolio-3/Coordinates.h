@@ -31,10 +31,10 @@ public:
 	void printCollinearPoints();
 	
 	/*This function is for drawing purposes, it has been out commented because it requires some setup to work*/
-	/*void setMap(Image * inputMap);*/
+	void setMap(Image * inputMap);
 
 	/*This function is for drawing purposes, it has been out commented because it requires some setup to work*/
-	/*void drawGroups();*/
+	void drawGroups();
 
 	double slope;
 
@@ -67,7 +67,7 @@ private:
 	int randomNumber();
 
 	/*This function is for drawing purposes, it has been out commented because it requires some setup to work*/
-	/*void drawStraightLine(int x0, int y0, int x1, int y1);*/
+	void drawStraightLine(int x0, int y0, int x1, int y1);
 	
 	Image* map;
 	int coordinateX;
